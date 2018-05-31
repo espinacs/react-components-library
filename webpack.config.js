@@ -1,24 +1,26 @@
-const path = require('path')
+const path = require('path');
+
+console.log('USING WEBPACK!!');
 
 module.exports = {
-  entry: './src/index.test.jsx',
+  entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    publicPath: '/dist/',
-    path: path.resolve('dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         exclude: /\.module\.css$/,
-        use: [{loader: 'style-loader'}, {loader: 'css-loader'}],
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
         test: /\.module\.css$/,
         use: [
-          {loader: 'style-loader'},
-          {loader: 'css-loader', options: {modules: true, camelCase: true}},
+          { loader: 'style-loader' },
+          { loader: 'css-loader', options: { modules: true, camelCase: true } },
         ],
       },
       {
@@ -32,4 +34,4 @@ module.exports = {
       },
     ],
   },
-}
+};

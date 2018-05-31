@@ -1,0 +1,16 @@
+.expandable-label {
+  background:none!important;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.expandable-text {
+  color: blue;
+  border-bottom: 1px solid #444;
+}

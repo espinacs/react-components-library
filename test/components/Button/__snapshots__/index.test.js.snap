@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`does apply light style 1`] = `
+<button
+  class="button button-type-light"
+  data-testid="button"
+>
+  test
+</button>
+`;
+
+exports[`mounts empty, renders null 1`] = `
+<button
+  class="button"
+  data-testid="button"
+/>
+`;
+
+exports[`renders something inside 1`] = `
+<button
+  class="button"
+  data-testid="button"
+>
+  test
+</button>
+`;

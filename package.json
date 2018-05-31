@@ -1,16 +1,30 @@
 {
-  "name": "react-components-library",
-  "version": "1.0.0",
+  "name": "espinacs-react-library",
+  "version": "1.0.13",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/espinacs/react-components-library"
+  },
+  "keywords": [
+    "jest",
+    "react",
+    "components",
+    "storybook",
+    "react-testing-library"
+  ],
   "scripts": {
     "test": "jest --coverage",
     "lint": "eslint ./src/**/**.js",
-    "test:watch": "jest --watchAll --json --outputFile=.jest-test-results.json",
-    "storybook": "start-storybook -p 9001 -c .storybook --quiet",
-    "storybook:build": "build-storybook -c .storybook -o .out"
+    "test:watch": "jest --watch --json --outputFile=.jest-test-results.json",
+    "storybook": "start-storybook -p 9002 -c .storybook --quiet",
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && yarn run webpack --mode=production",
+    "transpile": "npm run build && babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile"
   },
-  "keywords": [],
   "author": "Wakoopa",
   "license": "MIT",
   "devDependencies": {
@@ -21,6 +35,7 @@
     "@storybook/addon-options": "^3.4.6",
     "@storybook/addon-storysource": "^3.4.6",
     "@storybook/react": "4.0.0-alpha.8",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
@@ -52,7 +67,8 @@
     "antd": "^3.5.4",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "react-modal": "^3.4.4"
   },
   "babel": {
     "presets": "./.babelrc.js"

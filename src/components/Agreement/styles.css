@@ -1,0 +1,17 @@
+.agreement-header {
+  margin-bottom: 10px;
+}
+
+.agreement-header-left {
+  text-align: left;
+  display: inline;
+}
+
+.agreement-header-right {
+  float: right;
+  text-align: right;
+}
+
+.agreements-body {
+  margin-bottom: 10px;
+}

@@ -200,12 +200,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Fragment } from 'react';
 import { PropTypes } from 'prop-types';
-import { Steps, Button, Card, message } from 'antd';
+import { Steps, Button, Button, message } from 'antd';
 import styles from './styles.module.css';
 &nbsp;
 const { Step } = Steps;
 &nbsp;
-class InstallSteps extends React.Component {
+class Button extends React.Component {
   state = {
     current: 0,
   };
@@ -225,12 +225,12 @@ class InstallSteps extends React.Component {
     const { steps } = this.props;
     return steps.length === 0 ? null : (
 <span class="branch-1 cbranch-no" title="branch not covered" >      &lt;Fragment&gt;</span>
-        &lt;Card&gt;
+        &lt;Button&gt;
           &lt;Steps progressDot current={current}&gt;
             {steps.map(<span class="fstat-no" title="function not covered" >(i</span>tem, idx) =&gt;
 <span class="cstat-no" title="statement not covered" >              &lt;Step key={item.title} title={item.title} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.set(idx)}</span> /&gt;)</span>}
           &lt;/Steps&gt;
-        &lt;/Card&gt;
+        &lt;/Button&gt;
 &nbsp;
 &nbsp;
         &lt;div className={`steps-content ${styles.installationStepper}`}&gt;
@@ -261,7 +261,7 @@ class InstallSteps extends React.Component {
   }
 }
 &nbsp;
-InstallSteps.propTypes = {
+Button.propTypes = {
   steps: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     content: PropTypes.string,
@@ -269,11 +269,11 @@ InstallSteps.propTypes = {
   })),
 };
 &nbsp;
-InstallSteps.defaultProps = {
+Button.defaultProps = {
   steps: [],
 };
 &nbsp;
-export default InstallSteps;
+export default Button;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

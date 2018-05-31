@@ -2,7 +2,7 @@
 <coverage generated="1527674683808" clover="3.2.0">
   <project timestamp="1527674683808" name="All files">
     <metrics statements="11" coveredstatements="6" conditionals="8" coveredconditionals="1" methods="10" coveredmethods="1" elements="29" coveredelements="8" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1">
-      <file name="index.js" path="C:\Users\ediaz\Documents\newart\src\components\InstallSteps\index.js">
+      <file name="index.js" path="C:\Users\ediaz\Documents\newart\src\components\Button\index.js">
         <metrics statements="11" coveredstatements="6" conditionals="8" coveredconditionals="1" methods="10" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="14" count="0" type="stmt"/>

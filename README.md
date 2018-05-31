@@ -1,5 +1,7 @@
 # React Components Library
 
+React Components Library for a better dev world.
+
 ## Installing
 
 Make sure you have the latest Stable or LTS version of Node.js installed.
