@@ -24,7 +24,7 @@
     "build": "npm run clean && yarn run webpack --mode=production",
     "transpile": "npm run build && babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
-    "heroku-postbuild": "build-storybook -c .storybook -o build"
+    "heroku-postbuild": "build-storybook -c .storybook -o public"
   },
   "author": "Wakoopa",
   "license": "MIT",
